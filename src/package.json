@@ -1,0 +1,15 @@
+{
+    "author": "",
+    "dependencies": {
+        "redis": "^3.1.2"
+    },
+    "description": "",
+    "license": "ISC",
+    "main": "app.js",
+    "name": "sam-app",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "version": "1.0.0"
+}
+

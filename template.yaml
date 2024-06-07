@@ -1,0 +1,21 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Resources:
+  HelloWorldFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: src/app.lambdaHandler
+      Runtime: nodejs16.x
+      CodeUri: .
+      MemorySize: 128
+      Timeout: 10
+      Environment:
+        Variables:
+          REDIS_HOST: "host.docker.internal"
+          REDIS_PORT: "6379"
+      Events:
+        HelloWorldApi:
+          Type: Api
+          Properties:
+            Path: /hello
+            Method: get
